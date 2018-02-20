@@ -21,6 +21,22 @@ exercise.findBiggerSalaries = function(){
     //     Example: salaries larger than 300K is 8
     // ---------------------------------------------------
 
+  var len=exercise.salaries.length;
+  var item=exercise.salary;
+  var result=[];
+  for( var i =0 ;i < len; i++)
+
+{
+    var curSal= Number(exercise.salaries[i][18])
+    if (exercise.largerSalary(curSal)==true)
+    {
+    result.push(curSal);
+
+    }
+}
+
+console.log(result);
+return result;
 };
 
 // filter function
@@ -33,4 +49,9 @@ exercise.largerSalary = function largerSalary(item){
     //     is larger than exercise.salary
     // ---------------------------------------------------
 
+
+    if ( exercise.salary<item)
+    return true;
+    else
+    return false;
 };
